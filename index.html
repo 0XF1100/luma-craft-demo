@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LUMA CRAFT</title>
+  <!-- Fonts are temporary system stacks (see --font-* in style.css) until final fonts are chosen -->
+  <!-- Mark JS as available before first paint, so the intro covers the page from frame one -->
+  <script>
+    document.documentElement.classList.add("js-intro");
+    // /?tempdes = hook for future design experiments (gate new CSS with .tempdes, JS with TEMPDES)
+    if (new URLSearchParams(location.search).has("tempdes")) document.documentElement.classList.add("tempdes");
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ───────────── Floating navbar ───────────── -->
+  <header class="nav-wrap">
+    <nav class="nav" id="nav">
+      <!-- Logo doubles as "back to top" (handled in main.js) -->
+      <a href="#top" class="logo" id="logo" aria-label="LUMA CRAFT — חזרה לראש הדף">
+        <!-- SVG text + textLength stretches the letters horizontally: wide, low letterforms.
+             CRAFT is centered (text-anchor middle) and packed into a narrower length. -->
+        <svg viewBox="0 0 140 36" class="logo-svg" aria-hidden="true">
+          <text x="0" y="21" class="logo-main" textLength="140" lengthAdjust="spacingAndGlyphs">LUMA</text>
+          <text x="70" y="34" class="logo-sub" text-anchor="middle" textLength="62" lengthAdjust="spacingAndGlyphs">CR<tspan class="logo-a">A</tspan>FT</text>
+        </svg>
+      </a>
+
+      <a href="#contact" class="nav-cta">פניות</a>
+    </nav>
+  </header>
+
+  <!-- Load intro: two black halves part from a line of light at the center -->
+  <div class="intro" aria-hidden="true">
+    <div class="intro-half intro-top"></div>
+    <div class="intro-half intro-bottom"></div>
+    <div class="intro-line"></div>
+  </div>
+
+  <main id="top">
+
+    <!-- ───────────── Chapter I ───────────── -->
+    <section class="chapter tone-1" id="ch1">
+      <div class="chapter-text">
+        <p class="chapter-num">פרק I</p>
+        <h2 class="model-name">Dawn<span>שחר</span></h2>
+        <p class="model-story">טקסט זמני. כאן יבוא הסיפור של השעון הראשון: שתיים־שלוש שורות על האופי, החומרים וההשראה.</p>
+        <dl class="specs">
+          <div><dt>קוטר</dt><dd>—</dd></div>
+          <div><dt>מארז</dt><dd>—</dd></div>
+          <div><dt>מנגנון</dt><dd>—</dd></div>
+          <div><dt>רצועה</dt><dd>—</dd></div>
+        </dl>
+        <div class="price-row">
+          <span class="price">₪00,000</span>
+          <a href="#contact" class="btn">לתיאום צפייה</a>
+        </div>
+      </div>
+      <!-- Dawn: "Patek Philippe Two-Crown Worldtime" by ar-watches (CC-BY 4.0), see assets/models/CREDITS.md -->
+      <div class="chapter-stage" data-model="assets/models/patek/scene.gltf">
+        <div class="stage-placeholder"><span>WATCH 01</span></div>
+        <p class="drag-hint">גררו לסיבוב</p>
+      </div>
+    </section>
+
+    <!-- ───────────── Chapter II ───────────── -->
+    <section class="chapter tone-2" id="ch2">
+      <div class="chapter-text">
+        <p class="chapter-num">פרק II</p>
+        <h2 class="model-name">Negev<span>נגב</span></h2>
+        <p class="model-story">טקסט זמני. כאן יבוא הסיפור של השעון השני.</p>
+        <dl class="specs">
+          <div><dt>קוטר</dt><dd>—</dd></div>
+          <div><dt>מארז</dt><dd>—</dd></div>
+          <div><dt>מנגנון</dt><dd>—</dd></div>
+          <div><dt>רצועה</dt><dd>—</dd></div>
+        </dl>
+        <div class="price-row">
+          <span class="price">₪00,000</span>
+          <a href="#contact" class="btn">לתיאום צפייה</a>
+        </div>
+      </div>
+      <!-- Negev: "Timex Expedition Watch" by gorzi (CC-BY 4.0); display stand hidden -->
+      <div class="chapter-stage" data-model="assets/models/timex/scene.gltf" data-hide="Plane001_1,Plane009_8,Plane007_16,Circle008_17">
+        <div class="stage-placeholder"><span>WATCH 02</span></div>
+        <p class="drag-hint">גררו לסיבוב</p>
+      </div>
+    </section>
+
+    <!-- ───────────── Chapter III ───────────── -->
+    <section class="chapter tone-3" id="ch3">
+      <div class="chapter-text">
+        <p class="chapter-num">פרק III</p>
+        <h2 class="model-name">Yam<span>ים</span></h2>
+        <p class="model-story">טקסט זמני. כאן יבוא הסיפור של השעון השלישי.</p>
+        <dl class="specs">
+          <div><dt>קוטר</dt><dd>—</dd></div>
+          <div><dt>מארז</dt><dd>—</dd></div>
+          <div><dt>מנגנון</dt><dd>—</dd></div>
+          <div><dt>צמיד</dt><dd>—</dd></div>
+        </dl>
+        <div class="price-row">
+          <span class="price">₪00,000</span>
+          <a href="#contact" class="btn">לתיאום צפייה</a>
+        </div>
+      </div>
+      <div class="chapter-stage" data-model="assets/models/rolex.glb" data-hide="Dummy001,base" data-glass="glass" data-no-vertex-colors data-rotate="90,0,0" data-zoom="1.12">
+        <div class="stage-placeholder"><span>WATCH 03</span></div>
+        <p class="drag-hint">גררו לסיבוב</p>
+      </div>
+    </section>
+
+    <!-- ───────────── Contact (visual only, the form doesn't send yet) ───────────── -->
+    <section class="contact" id="contact">
+      <div class="contact-inner">
+        <div class="contact-form-col">
+          <p class="chapter-num">פניות</p>
+          <h2 class="contact-title">נשמח לשמוע מכם</h2>
+          <p class="contact-lead">השאירו פרטים ונחזור אליכם לתיאום פגישה בבוטיק.</p>
+          <form class="form" onsubmit="return false">
+            <div class="field">
+              <label for="f-name">שם מלא</label>
+              <input id="f-name" type="text" autocomplete="name" placeholder="ישראל ישראלי">
+            </div>
+            <div class="field">
+              <label for="f-phone">טלפון</label>
+              <input id="f-phone" type="tel" autocomplete="tel" dir="ltr" placeholder="050-000-0000" style="text-align:right">
+            </div>
+            <div class="field">
+              <label for="f-email">אימייל <small>(אופציונלי)</small></label>
+              <input id="f-email" type="email" autocomplete="email" dir="ltr" placeholder="name@example.com" style="text-align:right">
+            </div>
+            <button type="button" class="btn">שליחה</button>
+          </form>
+        </div>
+
+        <div class="contact-brand">
+          <svg viewBox="0 0 140 36" class="logo-svg" aria-label="LUMA CRAFT" role="img">
+            <text x="0" y="21" class="logo-main" textLength="140" lengthAdjust="spacingAndGlyphs">LUMA</text>
+            <text x="70" y="34" class="logo-sub" text-anchor="middle" textLength="62" lengthAdjust="spacingAndGlyphs">CR<tspan class="logo-a">A</tspan>FT</text>
+          </svg>
+          <p>שדרות רוטשילד, תל אביב<br>א׳–ה׳ 10:00–19:00</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Import map: lets the browser resolve `import "three"` without a bundler -->
+  <script type="importmap">
+  { "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+  } }
+  </script>
+  <script src="js/main.js"></script>
+  <script type="module" src="js/viewer.js"></script>
+</body>
+</html>

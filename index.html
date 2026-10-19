@@ -7,6 +7,8 @@
   <!-- Fonts are temporary system stacks (see --font-* in style.css) until final fonts are chosen -->
   <!-- Mark JS as available before first paint, so the intro covers the page from frame one -->
   <script>
+    // /?frames = the image-sequence (pre-rendered frames) branch: a full, independent copy in /frames/
+    if (new URLSearchParams(location.search).has("frames")) location.replace("frames/" + location.search);
     document.documentElement.classList.add("js-intro");
     // /?tempdes = hook for future design experiments (gate new CSS with .tempdes, JS with TEMPDES)
     if (new URLSearchParams(location.search).has("tempdes")) document.documentElement.classList.add("tempdes");

@@ -154,8 +154,8 @@ body::after {
 }
 
 .nav-cta {
-  grid-area: 1 / 1;         /* first column = right edge in RTL */
-  justify-self: start;
+  grid-area: 1 / 3;         /* third column = LEFT edge in RTL, balancing the centered logo */
+  justify-self: end;
   font-size: .78rem; letter-spacing: .25em;
   color: var(--text);
   padding: 4px 0;
